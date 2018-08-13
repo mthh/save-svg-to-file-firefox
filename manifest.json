@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "SaveSvg",
+  "version": "1.0",
+  "description": "Allows to save svg HTML elements as .svg or .png file",
+  "icons": {
+    "48": "icons/savesvg-48.png"
+  },
+  "permissions": ["contextMenus", "downloads", "notifications"],
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/content-script.js"]
+    }
+  ]
+}
